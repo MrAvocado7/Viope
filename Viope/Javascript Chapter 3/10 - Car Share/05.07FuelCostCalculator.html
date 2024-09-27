@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cost Calculator</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 10em;
+        }
+    </style>
+    <script src="05.07FuelCostCalculator.js" defer></script>
+</head>
+<body>
+    <h1>Fuel Cost Calculator</h1>
+    <label for="kilometers">Driven kilometers:</label>
+    <input type="number" id="kilometers" placeholder="Enter kilometers" required>
+
+    <label for="consumption">Fuel Consumption</label>    
+    <input type="number" step="0.1" id="consumption" placeholder="Enter Consumption" required>
+
+    <label for="price">Price per Liter</label>
+    <input type="number" step="0.01" id="price" placeholder="Enter price" required>
+
+    
+    <label for="participants">Participants</label>
+    <input type="number" id="participants" placeholder="Enter number of participants" required>
+    
+    <button onclick="calculateCosts()">Calculate</button>
+
+    <div id="answerId"></div>
+</body>
+</html>

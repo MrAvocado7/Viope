@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Unit Calculator</title>
+    <script src="fineCalculator.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #answerDiv {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fine Unit Calculator</h1>
+    <label for="txtNetIncome">Enter your net income (euros):</label>
+    <input type="number" id="txtNetIncome" placeholder="Net Income">
+    <button onclick="calculateUnitFine()">Calculate Fine Unit</button>
+    <div id="answerDiv"></div>
+</body>
+</html>
