@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Package Comparison</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Subscription Package Comparison</h1>
+    <label for="callTime">Call time (minutes)</label>
+    <input type="number" id="callTime" placeholder="Enter call time" required><br>
+
+    <label for="textMessages">Text messages (pcs):</label>
+    <input type="number" id="textMessages" placeholder="Enter number of text messages" required><br>
+
+    <button onclick="comparePackages()">Compare Packages</button>
+    <div id="answer"></div>
+    <script src="packageComparison.js"></script>
+</body>
+</html>

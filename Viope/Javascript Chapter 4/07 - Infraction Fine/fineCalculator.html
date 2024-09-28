@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraction Fine Calculator</title>
+    <script src="fineCalculator.js" defer></script>
+</head>
+<body>
+    <h1>Infraction Fine Calculator</h1>
+    <label for="drivingSpeed">Driving speed (km/h): </label>
+    <input type="number" id="drivingSpeed"><br><br>
+
+    <label for="speedLimit">Speed limit (km/h): </label>
+    <input type="number" id="speedLimit"><br><br>
+
+    <button onclick="calculateFine()">Check Fine</button>
+
+    <div id="answer"></div>
+</body>
+</html>
