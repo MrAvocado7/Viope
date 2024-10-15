@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Hondt Method</title>
+</head>
+<body>
+    <h1>D'Hondt Method for Comparison Scores</h1>
+    <label for="totalVotes">Total Votes for the Party:</label>
+    <input type="number" id="totalVotes" placeholder="Enter total votes" required>
+    <label for="candidateVotes">Candidate Votes (comma-separated):</label>
+    <input type="text" id="candidateVotes" placeholder="Enter votes, e.g. 1000,2000,3000" required>
+    <button onclick="showComparisonScores()">Show Comparison Scores</button>
+    <div id="answer"></div>
+
+    <script src="partyVotes.js"></script>
+</body>
+</html>

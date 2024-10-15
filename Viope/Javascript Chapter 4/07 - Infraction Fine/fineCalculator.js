@@ -1,39 +1,34 @@
-function calculateFine() {
-    // Get the input values
+function tellInfractionFine() {
+
     var drivingSpeed = parseFloat(document.getElementById('drivingSpeed').value);
     var speedLimit = parseFloat(document.getElementById('speedLimit').value);
     var excessSpeed = drivingSpeed - speedLimit;
-    var fine = "";
+    var  message = "";
     
-    // Check if there's any speeding
     if (excessSpeed <= 0) {
-        fine = "No speeding, no fine.";
-    } 
-    // For speed limits between 10-60 km/h
+        message = "No speeding, no fine.";
+    }
     else if (speedLimit >= 10 && speedLimit <= 60) {
         if (excessSpeed <= 15) {
-            fine = "Infraction fine: 85 euros.";
+            message = "Infraction fine is 85 euros.";
         } else if (excessSpeed <= 20) {
-            fine = "Infraction fine: 115 euros.";
+            message = "Infraction fine is 115 euros.";
         } else {
-            fine = "Income-based unit fine.";
+            message = "Income-based unit fine.";
         }
     } 
-    // For speed limits between 70-120 km/h
     else if (speedLimit >= 70 && speedLimit <= 120) {
         if (excessSpeed <= 15) {
-            fine = "Infraction fine: 70 euros.";
+            message = "Infraction fine is 70 euros.";
         } else if (excessSpeed <= 20) {
-            fine = "Infraction fine: 100 euros.";
+            message = "Infraction fine is 100 euros.";
         } else {
-            fine = "Income-based unit fine.";
+            message = "Income-based unit fine.";
         }
-    } 
-    // Invalid speed limit
+    }
     else {
-        fine = "Invalid speed limit entered.";
+        message = "Invalid speed limit.";
     }
 
-    // Display the result
-    document.getElementById('answer').innerText = fine;
+    document.getElementById('answer').innerText = message;
 }

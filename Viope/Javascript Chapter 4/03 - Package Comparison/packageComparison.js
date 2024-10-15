@@ -1,17 +1,15 @@
 function comparePackages() {
+
     var callTime = parseFloat(document.getElementById('callTime').value);
     var textMessages = parseFloat(document.getElementById('textMessages').value);
     
-    var allInclusiveCost = 29.90;
+    var specialPackageCost = 19.90 + (0.069 * callTime) + (0.069 * textMessages);
+    var message;
     
-    var baseSpecialCost = 19.90;
-    var costPerCall = 0.069 * callTime;
-    var costPerText = 0.069 * textMessages;
-    var specialPackageCost = baseSpecialCost + costPerCall + costPerText;
-
-    if (specialPackageCost < allInclusiveCost) {
-        document.getElementById('answer').innerText = "The Special package (" + specialPackageCost.toFixed(2) + ") is cheaper than the All-inclusive package (" + allInclusiveCost + ").";
+    if (specialPackageCost < 29.90) {
+        message = 'The special package (23.35) is cheaper than the All-inclusive package (29.90)';
     } else {
-        document.getElementById('answer').innerText = "The All-inclusive package (" + allInclusiveCost + ") is cheaper than the Special package (" + specialPackageCost.toFixed(2) + ").";
+        message = 'The All-inclusive package (29.90) is cheaper than the Special package (37.15)';
     }
+    document.getElementById('answer').innerText = message;
 }

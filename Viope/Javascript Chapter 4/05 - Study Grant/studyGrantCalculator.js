@@ -1,26 +1,17 @@
-function calculateGrant() {
-    // Get the values from the input fields
+function showStudyGrant() {
+
     var age = parseInt(document.getElementById('age').value);
-    var withParents = document.getElementById('withParents').checked;
+    var withParents = document.getElementById('withParents').value.toLowerCase();
+    var message;
 
-    // Check if the age is a valid number
-    if (isNaN(age) || age <= 0) {
-        document.getElementById('answer').innerText = "Please enter a valid age.";
-        return;
+    if (age >= 20 && withParents === "y") {
+        message = "The study grant is 87.23 euros and 196.27 euros.";
     }
-
-    // Determine the study grant based on age and living situation
-    var grant;
-    if (age >= 20) {
-        if (withParents) {
-            grant = "87.23 - 196.27 euros (depending on parents' income)";
-        } else {
-            grant = "268.23 euros";
-        }
-    } else {
-        grant = "Ask Kela.";
+    else if (age >= 20 && withParents === "n") {
+        message = "The study grant is 268.23 euros.";
     }
-
-    // Display the result
-    document.getElementById('answer').innerText = "Study Grant: " + grant;
+    else {
+        message = "Ask Kela.";
+    }
+    document.getElementById('answer').innerText = message;
 }

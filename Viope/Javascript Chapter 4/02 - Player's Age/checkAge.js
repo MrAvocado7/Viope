@@ -1,10 +1,20 @@
 function checkAge() {
-    var age = parseInt(document.getElementById('age').value);
-    if (isNaN(age) || age <= 0) {
+
+    var ageInput = document.getElementById('age');
+
+    if (!ageInput || !ageInput.value) {
         document.getElementById('answer').innerText = "Enter a valid age.";
-    } else if (age < 18) {
-        document.getElementById('answer').innerText = "Enter a valid age.";
-    } else {
-        document.getElementById('answer').innerText = "Old enough to play.";
+        return;
     }
+
+    var age = parseInt(ageInput.value);
+    var message;
+    
+    if (age < 18) {
+        message = "Adolescents are not allowed to play.";
+    } else {
+        message = "Old enough to play.";
+    }    
+    
+    document.getElementById('answer').innerText = message;
 }
