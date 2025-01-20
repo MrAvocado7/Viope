@@ -5,7 +5,3 @@ function logPressing() {
 function buttonClicked() {
     console.log("Hello!");
 }
-const button = document.getElementById('MyButton');
-button.addEventListener('click', function() {
-    logPressing();
-});
