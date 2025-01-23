@@ -2,11 +2,6 @@ function calculateFee() {
 
     var priceInput = document.getElementById('price');
 
-    if (!priceInput || !priceInput.value) {
-        document.getElementById('fee').innerText = "Enter a valid price";
-        return;
-    }
-
     var price = parseFloat(priceInput.value);
 
     var fee = price * 0.0344;

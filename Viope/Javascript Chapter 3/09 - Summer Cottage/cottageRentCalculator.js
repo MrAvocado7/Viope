@@ -1,4 +1,4 @@
-function calculateRentPerPerson() {
+function calculateRent() {
     var totalRent = parseFloat(document.getElementById('rent').value);
     var participants = parseInt(document.getElementById('participants').value);
 

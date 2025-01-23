@@ -5,7 +5,7 @@ function showStudyGrant() {
     var message;
 
     if (age >= 20 && withParents === "y") {
-        message = "The study grant is 87.23 euros and 196.27 euros.";
+        message = "The study grant is 87.23 - 196.27 euros.";
     }
     else if (age >= 20 && withParents === "n") {
         message = "The study grant is 268.23 euros.";

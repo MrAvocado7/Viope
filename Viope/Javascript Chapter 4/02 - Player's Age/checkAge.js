@@ -1,12 +1,6 @@
 function checkAge() {
 
     var ageInput = document.getElementById('age');
-
-    if (!ageInput || !ageInput.value) {
-        document.getElementById('answer').innerText = "Enter a valid age.";
-        return;
-    }
-
     var age = parseInt(ageInput.value);
     var message;
     
