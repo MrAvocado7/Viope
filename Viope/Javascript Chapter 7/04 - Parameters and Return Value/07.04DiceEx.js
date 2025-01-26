@@ -3,7 +3,6 @@ function getRandomInteger(min, max) {
 }
 
 function rollTheDice() {
-    let diceValue = getRandomInteger(1, 6);
-    
+    var diceValue = getRandomInteger(1, 6);
     document.getElementById('dice').innerText = diceValue;
 }
