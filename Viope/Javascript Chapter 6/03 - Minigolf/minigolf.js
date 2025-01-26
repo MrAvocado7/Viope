@@ -11,6 +11,6 @@ function showResults() {
     let biggestResult = minigolf[lastIndex];
 
     document.getElementById('answer').innerHTML =
-    'The smallest result is 19 (winner).<br>' +
-    'The biggest result is 37.';
+    "The smallest result is " + smallestResult + " (winner).<br>" +
+    "The biggest result is " + biggestResult + ".";
 }
