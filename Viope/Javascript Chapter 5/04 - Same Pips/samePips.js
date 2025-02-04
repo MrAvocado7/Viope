@@ -8,5 +8,5 @@ function randomizeDice() {
         count++;
     } while (pips1 !== pips2);
     
-    document.getElementById('answer').innerText = 'It took ${count} rounds to get the same pips (${pips1}).';
+    document.getElementById('answer').innerText = "It took  rounds to get the same pips.";
 }
