@@ -1,13 +1,16 @@
 function showComparisonScores() {
-    var totalVotes = parseInt(document.getElementById('totalVotes').value);
-    var candidateVotesInput = document.getElementById('candidateVotes').value;
-    var candidateVotes = candidateVotesInput.split(',').map(Number);
+    var totalVotes = parseInt(document.getElementById('votes').value);
+    var totalCandidates = parseInt(document.getElementById('candidates').value);
+    
     var outputText = "";
-
-    for (var i = 0; i < candidateVotes.length; i++) {
+    
+    // For each candidates
+    for (var i = 0; i < totalCandidates; i++) {
         var ordinal = i + 1;
-        var comparisonScore = totalVotes / ordinal;
-        outputText += (ordinal) + ". candidate: " + comparisonScore.toFixed(0) + "<br>";
+        // Calculate comparison score for candidate
+		var comparisonScore = totalVotes / ordinal;
+        outputText += ordinal + ". candidate: " + comparisonScore.toFixed(0) + "<br>";
     }
-    document.getElementById('answer').innerHTML = outputText;
+    // Show scores
+	document.getElementById('answer').innerHTML = outputText;
 }
