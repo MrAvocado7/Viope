@@ -1,5 +1,3 @@
 // Insert your JavaScript code here
-function Math.random() {
-var randomizedNumber = Math.random;
+let randomizedNumber = Math.random();
 console.log(randomizedNumber);
-}
